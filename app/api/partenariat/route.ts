@@ -1,0 +1,8 @@
+import {NextResponse} from 'next/server';
+import {validateInquiry,type Inquiry} from '@/lib/inquiry';
+export async function POST(request:Request){
+ const endpoint=process.env.PARTNERSHIP_WEBHOOK_URL;
+ if(!endpoint)return NextResponse.json({error:'Envoi indisponible.'},{status:503});
+ if(request.headers.get('origin')!==new URL(request.url).origin)return NextResponse.json({error:'Origine non autorisée.'},{status:403});
+ try{if(Number(request.headers.get('content-length')||0)>16000)return NextResponse.json({error:'Demande trop volumineuse.'},{status:413});const raw=await request.text();if(raw.length>16000)return NextResponse.json({error:'Demande trop volumineuse.'},{status:413});const parsed=JSON.parse(raw);const keys=['name','establishment','type','city','phone','email','message'];const data=Object.fromEntries(keys.map(k=>[k,typeof parsed[k]==='string'?parsed[k].trim():''])) as Inquiry;const errors=validateInquiry(data);if(Object.keys(errors).length)return NextResponse.json({errors},{status:400});if(new URL(endpoint).protocol!=='https:')return NextResponse.json({error:'Configuration indisponible.'},{status:503});const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json',...(process.env.PARTNERSHIP_WEBHOOK_TOKEN?{Authorization:`Bearer ${process.env.PARTNERSHIP_WEBHOOK_TOKEN}`}:{})},body:JSON.stringify({...data,source:'fawahan-retail-partner'}),signal:AbortSignal.timeout(10000)});if(!response.ok)throw new Error('Delivery failed');return NextResponse.json({ok:true});}catch{return NextResponse.json({error:'L’envoi n’a pas abouti.'},{status:502});}
+}

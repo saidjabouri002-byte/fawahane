@@ -1,0 +1,32 @@
+# FAWAHAN Retail Partner
+
+Landing page française Next.js App Router, TypeScript, Tailwind CSS, Manrope, Lucide et Motion.
+
+## Démarrage
+
+Node.js 22 ou plus récent.
+
+```sh
+npm install
+npm run dev
+```
+
+Ouvrir http://localhost:3000. Pour la production serveur : `npm run build` puis `npm start`.
+
+## Photographies
+
+Les compositions CSS sont volontairement neutres et illustratives. Aucune photographie officielle n’a été fournie. Déposer les sept fichiers WebP indiqués dans `lib/assets.ts` dans `public/images/`, puis remplacer chaque `src: null` par `/images/nom-du-fichier.webp`. Le composant utilise ensuite `next/image` sans changement de mise en page. Les zones sont dimensionnées et les textes alternatifs configurés dans ce même fichier. Une fois toutes les photographies officielles ajoutées, adapter la note illustrative de la collection dans `app/page.tsx`.
+
+## Activer le formulaire
+
+Copier `.env.example` vers `.env.local`. Configurer `PARTNERSHIP_WEBHOOK_URL` avec un endpoint HTTPS acceptant du JSON et, si nécessaire, `PARTNERSHIP_WEBHOOK_TOKEN`. Le token reste côté serveur. L’endpoint doit renvoyer un code 2xx uniquement une fois la demande réellement prise en charge. Champs : name, establishment, type, city, phone, email, message, source. Redémarrer ou reconstruire le serveur après configuration. Sans destination, l’envoi est désactivé et explicitement signalé.
+
+La route `/api/partenariat` valide les données, vérifie l’origine et applique un délai d’attente. Configurer une limitation de débit au niveau de l’hébergeur avant ouverture du formulaire public. Aucun contact, tarif ou engagement commercial n’a été inventé.
+
+## Aperçu Sites
+
+`npm run build:preview` produit une version statique dans `out/`. Le script retire temporairement la route serveur pendant l’export et la restaure dans un bloc finally. Dans cet aperçu statique, le formulaire est toujours explicitement désactivé. L’activation du formulaire nécessite le déploiement Next.js serveur décrit ci-dessus ; une variable Sites seule ne l’active pas.
+
+## Vérifications
+
+`npm run typecheck` et `npm run build`. Vérifier les formats 1440, 1024, 768 et 390 px, les ancres, le menu mobile, la FAQ et les états d’envoi. Les composants essentiels et la FAQ restent utilisables sans JavaScript. Les animations respectent la réduction des mouvements.
