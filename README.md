@@ -30,3 +30,11 @@ La route `/api/partenariat` valide les données, vérifie l’origine et appliqu
 ## Vérifications
 
 `npm run typecheck` et `npm run build`. Vérifier les formats 1440, 1024, 768 et 390 px, les ancres, le menu mobile, la FAQ et les états d’envoi. Les composants essentiels et la FAQ restent utilisables sans JavaScript. Les animations respectent la réduction des mouvements.
+
+## Vidéo VSL du hero
+
+Le bloc vidéo se trouve immédiatement sous le titre principal. Configurer `lib/video.ts` : `src` reçoit le lien MP4 et `type: 'video'`, ou une URL d’intégration YouTube/Vimeo et `type: 'embed'`. `poster` et `captions` permettent d’ajouter une couverture et des sous-titres français à un MP4. Sans source, un emplacement non interactif indique « Vidéo de présentation à venir ». Aucun média fictif ni lecture automatique. Reconstruire l’aperçu après modification.
+
+## Visuels officiels intégrés
+
+Logo et photographies source : https://fawahan.store/ (logo, fiche Comme une Evidence et Pack Trio). Fichiers intégrés : `public/images/fawahan-logo.png`, `fawahan-bottle.png`, `fawahan-trio.png`. Détourage effectué avec l’outil Imagegen intégré, fond transparent conservé. Prompt : « Isoler uniquement les bouteilles / le logo d’origine ; retirer le décor, les textes publicitaires et les marges ; conserver les formes, couleurs, étiquettes et proportions ; produire un PNG à canal alpha transparent. » Les trois silhouettes des miniatures utilisent le trio détouré. Les ressources commerciales ne sont pas présentées comme des produits garantis inclus.

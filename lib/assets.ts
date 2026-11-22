@@ -1,11 +1,11 @@
-/** Set src to /images/<filename> once an approved product photograph is available. */
+/** Official photographs from fawahan.store, isolated as transparent PNGs. */
 export const assets = {
-  'hero-perfume': {src:null, file:'hero-perfume.webp', alt:'Flacon de parfum et son coffret FAWAHAN', fit:'contain'},
-  'hero-retail-display': {src:null,file:'hero-retail-display.webp',alt:'Une sélection de parfums FAWAHAN sur un présentoir',fit:'contain'},
-  'collection-bottles': {src:null,file:'collection-bottles.webp',alt:'La collection de parfums FAWAHAN',fit:'contain'},
-  'product-detail': {src:null,file:'product-detail.webp',alt:'Détail d’un flacon de parfum FAWAHAN',fit:'cover'},
-  'packaging-detail': {src:null,file:'packaging-detail.webp',alt:'Détail du coffret FAWAHAN',fit:'cover'},
-  'retail-display': {src:null,file:'retail-display.webp',alt:'Les parfums FAWAHAN dans un espace de vente',fit:'cover'},
-  'starter-kit': {src:null,file:'starter-kit.webp',alt:'Catalogue et ressources de présentation FAWAHAN',fit:'contain'},
+  'hero-perfume': {src:'/images/fawahan-bottle.png', file:'fawahan-bottle.png', alt:'Flacon FAWAHAN avec bouchon en cristal et col doré', fit:'contain'},
+  'hero-retail-display': {src:'/images/fawahan-trio.png',file:'fawahan-trio.png',alt:'Trois flacons FAWAHAN de la collection Empreinte',fit:'contain'},
+  'collection-bottles': {src:'/images/fawahan-bottle.png',file:'fawahan-bottle.png',alt:'Flacon de parfum FAWAHAN détouré',fit:'contain'},
+  'product-detail': {src:'/images/fawahan-bottle.png',file:'fawahan-bottle.png',alt:'Détail du flacon FAWAHAN et de son bouchon facetté',fit:'contain'},
+  'packaging-detail': {src:'/images/fawahan-trio.png',file:'fawahan-trio.png',alt:'Les trois silhouettes de flacons FAWAHAN',fit:'contain'},
+  'retail-display': {src:'/images/fawahan-trio.png',file:'fawahan-trio.png',alt:'Sélection de trois parfums FAWAHAN',fit:'contain'},
+  'starter-kit': {src:'/images/fawahan-trio.png',file:'fawahan-trio.png',alt:'Collection de flacons FAWAHAN',fit:'contain'},
 } satisfies Record<string,{src:string|null,file:string,alt:string,fit:string}>;
 export type AssetKey = keyof typeof assets;
