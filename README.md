@@ -15,7 +15,7 @@ Ouvrir http://localhost:3000. Pour la production serveur : `npm run build` puis 
 
 ## Photographies
 
-Les compositions CSS sont volontairement neutres et illustratives. Aucune photographie officielle n’a été fournie. Déposer les sept fichiers WebP indiqués dans `lib/assets.ts` dans `public/images/`, puis remplacer chaque `src: null` par `/images/nom-du-fichier.webp`. Le composant utilise ensuite `next/image` sans changement de mise en page. Les zones sont dimensionnées et les textes alternatifs configurés dans ce même fichier. Une fois toutes les photographies officielles ajoutées, adapter la note illustrative de la collection dans `app/page.tsx`.
+Les visuels produits et le logo transparents sont intégrés dans `public/images/`. Le portrait de Mehdi utilise `mehdi-enhanced.webp`, optimisé pour le web. Les références des produits sont centralisées dans `lib/assets.ts`.
 
 ## Activer le formulaire
 
@@ -38,3 +38,7 @@ Le bloc vidéo se trouve immédiatement sous le titre principal. Configurer `lib
 ## Visuels officiels intégrés
 
 Logo et photographies source : https://fawahan.store/ (logo, fiche Comme une Evidence et Pack Trio). Fichiers intégrés : `public/images/fawahan-logo.png`, `fawahan-bottle.png`, `fawahan-trio.png`. Détourage effectué avec l’outil Imagegen intégré, fond transparent conservé. Prompt : « Isoler uniquement les bouteilles / le logo d’origine ; retirer le décor, les textes publicitaires et les marges ; conserver les formes, couleurs, étiquettes et proportions ; produire un PNG à canal alpha transparent. » Les trois silhouettes des miniatures utilisent le trio détouré. Les ressources commerciales ne sont pas présentées comme des produits garantis inclus.
+
+## Déploiement Vercel
+
+Importer le dépôt GitHub dans Vercel avec le framework Next.js, le dossier racine `./` et les commandes par défaut. La branche de production est `main`. Configurer les variables du formulaire dans Vercel avant de l’activer.

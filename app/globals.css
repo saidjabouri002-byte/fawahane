@@ -11,3 +11,44 @@
 .hero-vsl{width:min(100%,640px);margin:30px auto 0;text-align:center}.vsl-frame{aspect-ratio:16/9;overflow:hidden;border-radius:22px;border:1px solid #ebe4d9;background:#f7f5ef;box-shadow:0 14px 42px #3828190a,0 2px 6px #38281906}.vsl-frame iframe,.vsl-frame video{display:block;width:100%;height:100%;border:0;background:#191918;object-fit:contain}.vsl-placeholder{height:100%;position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:17px;padding:28px;background:radial-gradient(ellipse at 0% 0%,#ffe2be88,transparent 58%),radial-gradient(ellipse at 100% 100%,#ffd1ab70,transparent 55%),linear-gradient(130deg,#fffefa,#f1efe9)}.vsl-brand{display:flex;align-items:center;gap:7px;font-size:10px;letter-spacing:.13em;color:#71685a}.vsl-brand svg{color:#dd8c51}.vsl-play{display:grid;place-items:center;width:65px;height:65px;border-radius:50%;color:#fff;background:linear-gradient(145deg,#373631,#151515);box-shadow:0 6px 18px #24201c18}.vsl-play svg{margin-left:4px}.vsl-placeholder strong{font-size:25px;font-weight:500;letter-spacing:-.04em;line-height:1.3}.vsl-status{font-size:11px;color:#766c5e;background:#ffffffa6;padding:4px 12px;border:1px solid #eee8dd;border-radius:20px}.hero-vsl figcaption{font-size:11px;color:#686864;margin-top:12px}@media(max-width:600px){.hero-vsl{margin-top:25px}.vsl-frame{border-radius:16px}.vsl-placeholder{gap:9px;padding:14px}.vsl-brand{font-size:8px}.vsl-play{width:42px;height:42px}.vsl-play svg{width:20px}.vsl-placeholder strong{font-size:18px}.vsl-status{font-size:9px;padding:2px 9px}.hero-vsl figcaption{font-size:10px;margin-top:9px}}
 /* Transparent official brand assets. */
 .official-logo{display:block;width:150px;height:auto;object-fit:contain}.footer .official-logo{width:160px}.official-visual>img{padding:14px;filter:drop-shadow(0 12px 10px #3d302714)}.hero-product .official-visual>img{padding:4px}.gallery-main>.official-visual>img{padding:45px 35px 115px}.gallery-side .official-visual>img{padding:18px}.starter-art .official-visual>img{padding:55px 24px 80px}.official-bottle{position:relative;overflow:hidden;width:82px;height:164px;flex-shrink:0}.official-bottle img{position:absolute;max-width:none!important;width:300%;height:100%;left:-100%;object-fit:fill}.official-bottle.smoke img{left:0}.official-bottle.blush img{left:-200%}.official-bottle.small{width:42px;height:84px}.selection-preview>div{gap:10px;padding-top:8px}.planning-row>.official-bottle{width:20px;height:40px}.feature-card .official-visual>img{padding:7px 20px 12px}@media(max-width:600px){.official-logo{width:125px}.gallery-main>.official-visual>img{padding:30px 20px 105px}.starter-art .official-visual>img{padding:30px 20px 55px}.hero-product .official-visual>img{padding:0}}
+
+/* Mehdi: a personal introduction to the partnership. */
+.mehdi-section{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}.mehdi-portrait{position:relative;min-height:520px;border-radius:28px;overflow:hidden;background:#e9ebf2}.mehdi-portrait>img{object-fit:cover;object-position:50% 30%}.mehdi-portrait:after{content:"";position:absolute;inset:50% 0 0;background:linear-gradient(transparent,#141d398c);pointer-events:none}.mehdi-name{position:absolute;bottom:30px;left:32px;z-index:1;color:white;display:flex;flex-direction:column;gap:5px}.mehdi-name span{font-size:9px;letter-spacing:.18em;color:#ffffffc9}.mehdi-name strong{font-size:38px;font-weight:500;letter-spacing:-.04em}.mehdi-copy h2{font-size:44px;line-height:1.18;margin-bottom:25px}.mehdi-copy h2 span{color:#777365}.mehdi-copy>p:not(.eyebrow){font-size:14px;line-height:1.85;margin-top:18px}.mehdi-copy>p.mehdi-intro{font-size:20px;line-height:1.55;color:#26261f;letter-spacing:-.025em}.mehdi-values{display:flex;flex-wrap:wrap;gap:9px 17px;padding-top:24px;margin:25px 0;border-top:1px solid var(--line)}.mehdi-values span{font-size:11px;color:#8a6b4f}.mehdi-copy .button{margin-top:4px}@media(max-width:1024px){.mehdi-section{gap:40px}.mehdi-copy h2{font-size:36px}.mehdi-portrait{min-height:500px}}@media(max-width:700px){.mehdi-section{grid-template-columns:1fr;gap:32px}.mehdi-portrait{min-height:0;aspect-ratio:1/1.08;max-height:540px}.mehdi-copy h2{font-size:34px}.mehdi-name{left:25px;bottom:23px}.mehdi-copy>p.mehdi-intro{font-size:19px}}
+
+/* Text first, portrait right; preserve the full new portrait composition. */
+.mehdi-section{grid-template-columns:1.1fr .9fr}.mehdi-portrait{min-height:0;aspect-ratio:1022/1170}.mehdi-portrait>img{object-position:center}.mehdi-name{bottom:22px}.mehdi-name strong{font-size:30px}@media(max-width:700px){.mehdi-section{grid-template-columns:1fr}.mehdi-portrait{aspect-ratio:1022/1170;max-height:none}}
+
+/* A two-line headline with warm editorial accents. */
+.hero h1.hero-headline{font-size:clamp(36px,4vw,52px);line-height:1.23;letter-spacing:-.05em}.headline-line{display:block;white-space:nowrap}.hero h1.hero-headline{color:#151515}.hero-headline strong{font-family:var(--font-brand-script),cursive;font-weight:400;font-size:1.35em;letter-spacing:0;color:#ad7028;line-height:1;display:inline-block;padding:0 .12em .1em .06em}.hero-center{max-width:850px}.hero-product{top:220px}
+
+@media(max-width:1024px){}@media(max-width:600px){.hero h1.hero-headline{font-size:clamp(18px,5.5vw,33px);line-height:1.4;letter-spacing:-.05em}.hero-headline strong{font-size:1.35em}}
+
+/* Keep complete card content visible on phones and smaller tablets. */
+@media(max-width:1024px){
+ .feature-card,.feature-card.wide,.feature-card:last-child{height:auto;min-height:340px;padding-bottom:24px}
+ .feature-card .visual{height:215px}
+ .feature-card:after{height:18px}
+ .card-copy h3,.feature-card.wide .card-copy h3{padding-right:45px}
+ .feature-card:last-child .planning-preview{margin:24px 23px 5px;max-width:none}
+ .planning-head{flex-wrap:wrap;row-gap:5px}
+ .planning-tabs{flex-wrap:wrap;gap:6px 10px}
+ .planning-row{height:auto;min-height:49px;padding:6px 0;gap:8px}
+ .planning-row>span{min-width:0}
+ .planning-chip{flex-shrink:0}
+ .feature-grid>*,.form-grid>*,.mehdi-section>*{min-width:0}
+}
+@media(max-width:800px){.menu-toggle{width:44px;height:44px;flex-shrink:0}.mobile-nav a{min-height:44px}}
+@media(max-width:600px){
+ .hero .button{max-width:100%;min-height:44px}
+ .hero-products{width:100%;gap:8px}
+ .hero-product{width:calc((100% - 8px)/2);max-width:155px;min-width:0}
+ .audience svg{flex-shrink:0}
+ .audience span{min-width:0}
+ .feature-card,.feature-card.wide,.feature-card:last-child{min-height:0}
+ .quote-preview{margin-bottom:8px}
+ .selection-preview{margin-bottom:10px}
+ .footer nav{width:100%;gap:4px 16px}
+ .footer nav a{display:flex;align-items:center;min-height:44px}
+ .field input,.field select,.field textarea{min-width:0}
+ .mehdi-copy .button{min-height:44px;max-width:100%}
+}

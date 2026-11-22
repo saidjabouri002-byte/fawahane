@@ -4,4 +4,4 @@ export const partnershipVideo: {
   type: 'video' | 'embed';
   poster?: string;
   captions?: string;
-} = { src: null, type: 'video' };
+} = { src: 'https://www.youtube.com/embed/VllN0yINA5A', type: 'embed' };
